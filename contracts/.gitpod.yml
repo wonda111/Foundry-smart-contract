@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      python3 -m pip install --upgrade pip
+      pip install slither-analyzer
+  - command: slither contracts/SimpleStorage.sol
+
+vscode:
+  extensions:
+    - JuanBlanco.solidity
